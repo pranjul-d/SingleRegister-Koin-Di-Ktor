@@ -12,6 +12,8 @@ import org.koin.core.context.startKoin
 class App : Application() {
 
     init {
+
+//        Koin di
         startKoin {
             androidContext(this@App)
 //       modules(module {

@@ -26,8 +26,6 @@ class KoinDiActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         connectionLiveData = ConnectionLiveData(this)
         setContentView(R.layout.activity_koin_di)
-
-
         setupUI()
         setupObserver()
 
