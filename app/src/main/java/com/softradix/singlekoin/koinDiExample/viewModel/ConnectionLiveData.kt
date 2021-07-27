@@ -73,11 +73,12 @@ class ConnectionLiveData(context: Context) : LiveData<Boolean>() {
         }
 
         /*
-          If the callback was registered with registerNetworkCallback() it will be called for each network which no longer satisfies the criteria of the callback.
+          If the callback was registered with registerNetworkCallback()
+          it will be called for each network which no longer satisfies the criteria of the callback.
           Source: https://developer.android.com/reference/android/net/ConnectivityManager.NetworkCallback#onLost(android.net.Network)
          */
         override fun onLost(network: Network) {
-            Log.d(TAG, "onLost: ${network}")
+            Log.d(TAG, "onLost: $network")
             validNetworks.remove(network)
             checkValidNetworks()
         }

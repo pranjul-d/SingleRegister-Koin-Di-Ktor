@@ -27,6 +27,9 @@ val appModule = module {
 
     fun provideNetworkHelper(context: Context) = NetworkHelper(context)
 
+
+//    fun provideNetworkHelper(context: Context) = NetworkHelper(context)
+
     fun provideOkHttpClient() = if (BuildConfig.DEBUG) {
         val loggingInterceptor = HttpLoggingInterceptor()
         loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
