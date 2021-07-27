@@ -16,9 +16,7 @@ class App : Application() {
 //        Koin di
         startKoin {
             androidContext(this@App)
-//       modules(module {
-//           single { initKtorClient() }
-//       })
+
 
             modules(
                 listOf(
